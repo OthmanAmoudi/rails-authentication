@@ -1,0 +1,18 @@
+<%= form_for(@user) do |f| %>
+<% if @user.errors.any? %>
+    <ul>
+<% @user.errors.full_messages.each do |msg|%>
+        <li><%=msg%></li>
+<% end %>
+    </ul>
+
+<% end %>
+
+    <%= label_tag "Name:" %>
+    <%= f.text_field :name %>
+    <%= label_tag "Email:" %>
+    <%= f.email_field :email %>
+    <%= label_tag "Password:" %>
+    <%= f.password_field :password %>
+    <%= f.submit "Sign up" %>
+<% end %>
