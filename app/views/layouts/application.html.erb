@@ -9,6 +9,9 @@
   </head>
 
   <body>
+    <% if logged_in? %>
+      <p> logged in as: <%= current_user.email %> </p>
+    <% end %>
     <%= yield %>
   </body>
 </html>
