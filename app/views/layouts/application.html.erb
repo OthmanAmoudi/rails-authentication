@@ -10,7 +10,9 @@
 
   <body>
     <% if logged_in? %>
-      <p> logged in as: <%= current_user.email %> </p>
+      <p> logged in as: <%= current_user.email %> <%= link_to  "logout", logout_path, method: :delete %> </p>
+      <% else %>
+      <p> <%= link_to  "log-in now!", login_path %> </p>
     <% end %>
     <%= yield %>
   </body>

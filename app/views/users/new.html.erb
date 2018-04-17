@@ -9,10 +9,10 @@
 <% end %>
 
     <%= label_tag "Name:" %>
-    <%= f.text_field :name %>
+    <%= f.text_field :name, :autocomplete => :off  %>
     <%= label_tag "Email:" %>
-    <%= f.email_field :email %>
+    <%= f.email_field :email, :autocomplete => :off  %>
     <%= label_tag "Password:" %>
-    <%= f.password_field :password %>
+    <%= f.password_field :password, :autocomplete => :off  %>
     <%= f.submit "Sign up" %>
 <% end %>
